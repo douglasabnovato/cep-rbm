@@ -40,12 +40,12 @@ class App extends React.Component {
             }
             return <div className="cep-list">
               <article>
-                <p>Buscar CEP</p>
-              </article>
-              <div className="actions">
-                <input onChange={this.handleChangeCep} value={this.state.cep} placeholder="CEP" type="text"/>
-                <button onClick={fetch}>Pesquisar</button>
-              </div>
+                <p className="barra-busca">Buscar CEP</p>
+                <div className="actions">
+                  <input onChange={this.handleChangeCep} value={this.state.cep} placeholder="CEP" type="text"/>
+                  <button onClick={fetch}>Pesquisar</button>
+                </div>
+              </article>              
             </div>
           }}
         </ViaCep>
