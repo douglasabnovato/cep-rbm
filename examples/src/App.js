@@ -1,5 +1,6 @@
 import React from 'react';
 import ViaCep from '../../dist';
+import "./style.css";
 
 class App extends React.Component {
   constructor(props) {
@@ -27,18 +28,24 @@ class App extends React.Component {
               return <p>error</p>
             }
             if (data) {
-              return <div>
-                <p>
-                  CEP: {data.cep} <br/>
-                  LOGRADOURO: {data.logradouro} <br/>
-                  CIDADE: {data.localidade} <br/>
-                  UF: {data.uf} <br/>
-                </p>
+              return <div className="cep-list">
+                <article>
+                  <p>Endereço Carregado</p>
+                  <p>CEP: {data.cep}</p>
+                  <p>LOGRADOURO: {data.logradouro}</p>
+                  <p>CIDADE: {data.localidade}</p>
+                  <p>UF: {data.uf}</p>
+                </article>
               </div>
             }
-            return <div>
-              <input onChange={this.handleChangeCep} value={this.state.cep} placeholder="CEP" type="text"/>
-              <button onClick={fetch}>Pesquisar</button>
+            return <div className="cep-list">
+              <article>
+                <p>Buscar CEP</p>
+              </article>
+              <div className="actions">
+                <input onChange={this.handleChangeCep} value={this.state.cep} placeholder="CEP" type="text"/>
+                <button onClick={fetch}>Pesquisar</button>
+              </div>
             </div>
           }}
         </ViaCep>
@@ -52,16 +59,18 @@ class App extends React.Component {
               return <p>error</p>
             }
             if (data) {
-              return <div>
-                <p>
-                  CEP: {data.cep} <br/>
-                  LOGRADOURO: {data.logradouro} <br/>
-                  CIDADE: {data.localidade} <br/>
-                  UF: {data.uf} <br/>
-                </p>
-              </div>
+              return <div className="cep-list">
+              <article>
+                <p>Exemplo Endereço</p>
+                <p>CEP: {data.cep}</p>
+                <p>LOGRADOURO: {data.logradouro}</p>
+                <p>CIDADE: {data.localidade}</p>
+                <p>UF: {data.uf}</p>
+              </article>
+            </div>
             }
             return <div>
+              Barra de Pesquisar<br/>
               <input onChange={this.handleChangeCep} value={this.state.cep} placeholder="CEP" type="text"/>
               <button onClick={fetch}>Pesquisar</button>
             </div>
