@@ -19,7 +19,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header id="main-header">CEP - RBMWeb</header>
+        <header id="main-header">CEP - RBM Web</header>
         <ViaCep cep={this.state.cep} onSuccess={this.handleSuccess} lazy>
           { ({ data, loading, error, fetch }) => {
             if (loading) {
