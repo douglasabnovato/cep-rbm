@@ -19,6 +19,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <header id="main-header">CEP - RBMWeb</header>
         <ViaCep cep={this.state.cep} onSuccess={this.handleSuccess} lazy>
           { ({ data, loading, error, fetch }) => {
             if (loading) {
@@ -40,7 +41,7 @@ class App extends React.Component {
             }
             return <div className="cep-list">
               <article>
-                <p className="barra-busca">Buscar CEP</p>
+                <p>Buscar CEP</p>
                 <div className="actions">
                   <input onChange={this.handleChangeCep} value={this.state.cep} placeholder="CEP" type="text"/>
                   <button onClick={fetch}>Pesquisar</button>
@@ -60,6 +61,7 @@ class App extends React.Component {
             }
             if (data) {
               return <div className="cep-list">
+                
               <article>
                 <p>Exemplo Endereço</p>
                 <p>CEP: {data.cep}</p>
@@ -69,8 +71,7 @@ class App extends React.Component {
               </article>
             </div>
             }
-            return <div>
-              Barra de Pesquisar<br/>
+            return <div> 
               <input onChange={this.handleChangeCep} value={this.state.cep} placeholder="CEP" type="text"/>
               <button onClick={fetch}>Pesquisar</button>
             </div>
