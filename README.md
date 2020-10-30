@@ -3,17 +3,7 @@
 ## Atualização: 11 de janeiro de 2020 - 20:04
 ## Criação: 08 de janeiro de 2020
 ## Prática : @douglasabnovato
-
-## Ferramentas : 
-
-![ReactJS](/images/logo-reactjs.jpg)
-![Git](/images/logo-git.png)
-![Github](/images/logo-github.png)
-![HTML/CSS/Javascript](/images/logo-html-css-js.jpeg)
-![VSCode](/images/logo-VSCode.png)
-![Yarn](/images/logo-yarn.png)
-![Nodejs](/images/logo-nodejs.png)
-![NPM](/images/logo-npm.png)
+ 
 
 #### Frontend `ReactJS` e Backend `NodeJS`
 - projeto desafio
